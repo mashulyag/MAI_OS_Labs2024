@@ -23,6 +23,8 @@ int main() {
     file_name2[MAX_LENGTH];
     fgets(file_name1, MAX_LENGTH, stdin);
     fgets(file_name2, MAX_LENGTH, stdin);
+    file_name1[strcspn(file_name1, "\n")] = '\0';
+    file_name2[strcspn(file_name2, "\n")] = '\0';
     char* file_names[] = {file_name1, file_name2};
 
     // Создаем пайпы
